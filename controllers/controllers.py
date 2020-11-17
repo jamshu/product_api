@@ -30,7 +30,7 @@ class ProductApi(http.Controller):
         return "Hi"
 
     @http.route('/product_api/<int:product_id>', auth='public')
-    def list(self, **kw):
+    def list(self,product_id, **kw):
         return http.request.render('product_api.listing', {
             'root': '/product_api',
             'objects': http.request.env['product.product'].search([('id','=',product_id)]),
