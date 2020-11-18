@@ -20,7 +20,7 @@ class ProductApi(http.Controller):
     @http.route('/api/product/json/<int:product_id>', auth='public')
     def json_data(self,product_id, **kw):
         data =[]
-        product_sudo = request.env['product.product'].sudo().browse(product_id)
+        product_sudo = http.request.env['product.product'].sudo().browse(product_id)
         if not product_sudo:
             return False
         
