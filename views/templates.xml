@@ -5,11 +5,11 @@
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">
-             <h2> <t t-esc="object.display_name"/></h2>
-              Price : <t t-esc="object.list_price"/>
-              Cost  : <t t-esc="object.standard_price"/>
-              OnHandQty : <t t-esc="object.qty_available"/>
-              Category : <t t-esc="object.categ_id.name"/>
+             <h2>Product Name : <t t-esc="object.display_name"/></h2>
+             <p> Price : <t t-esc="object.list_price"/> </p>
+             <p> Cost  : <t t-esc="object.standard_price"/></p>
+             <p> OnHandQty : <t t-esc="object.qty_available"/></p>
+             <p> Category : <t t-esc="object.categ_id.name"/></p>
             </li>
           </ul>
         </template>
