@@ -7,7 +7,7 @@
             <li t-foreach="objects" t-as="object">
              <h2> <t t-esc="object.display_name"/></h2>
               Price : <t t-esc="object.list_price"/>
-              Cost  : <t t-esc="object.cost"/>
+              Cost  : <t t-esc="object.standard_price"/>
               OnHandQty : <t t-esc="object.qty_available"/>
               Category : <t t-esc="object.categ_id.name"/>
             </li>
