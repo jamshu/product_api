@@ -1,12 +1,15 @@
 <odoo>
     <data>
+   
 
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
+             <h2> <t t-esc="object.display_name"/></h2>
+              Price : <t t-esc="object.list_price"/>
+              Cost  : <t t-esc="object.cost"/>
+              OnHandQty : <t t-esc="object.qty_available"/>
+              Category : <t t-esc="object.categ_id.name"/>
             </li>
           </ul>
         </template>

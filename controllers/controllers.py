@@ -14,7 +14,7 @@ class ProductApi(http.Controller):
     def list(self,product_id, **kw):
         return http.request.render('product_api.listing', {
             'root': '/product_api',
-            'objects': http.request.env['product.product'].search([('id','=',product_id)]),
+            'objects': http.request.env['product.product'].sudo().browse(product_id)
         })
     
     @http.route('/api/product/json/<int:product_id>', auth='public')
