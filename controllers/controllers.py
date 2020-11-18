@@ -24,7 +24,7 @@ class ProductApi(http.Controller):
         if not product:
             return False
         
-        data.append({'product':product_sudo.name,
+        data.append({'product':product.name,
                     'price':product.list_price,
                     'cost':product.standard_price,
                     'OnHandQty':product.qty_available,
