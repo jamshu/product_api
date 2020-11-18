@@ -22,7 +22,7 @@ class ProductApi(http.Controller):
         data =[]
         product_sudo = request.env['product.product'].sudo().browse(product_id)
         if not product_sudo:
-            rerurn False
+            return False
         
         data.append({'product':product_sudo.name,
                     'price':product.list_price,
